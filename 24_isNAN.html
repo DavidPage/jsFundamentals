@@ -1,0 +1,34 @@
+<!DOCTYPE>
+<html>
+<head>
+
+</head>
+<body>
+
+
+  <script>
+
+  function newParagraph() {
+    document.write("<br/> ");
+  }
+
+  document.write("isNaN(NaN): " + isNaN(NaN));
+  newParagraph();
+
+  document.write('isNaN("hello world"): ' + isNaN("hello world"));
+  newParagraph();
+
+  document.write("isNaN(5.5): " + isNaN(5.5));
+  newParagraph();
+
+  document.write("isNaN(2 / 'a'): " + isNaN(2 / 'a'));
+
+  var age = parseFloat("48");
+  var PIApprox = parseFloat("0.0314E+2");
+  newParagraph()
+  document.write(age);
+  newParagraph()
+  document.write(PIApprox);
+  </script>
+</body>
+<html>

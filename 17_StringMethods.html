@@ -1,0 +1,81 @@
+<!DOCTYPE>
+<html>
+<body>
+  <script>
+
+
+  function newParagraph() {
+    document.write("<br/> ");
+  }
+
+  // charAt
+  var character = "abcd".charAt(2);
+  document.write("Third character in 'abcd' is: " + character);
+  newParagraph();
+
+  document.write("Type of character is: " + typeof character);
+  newParagraph();
+  newParagraph();
+
+  // indexOf
+  var index = "abcd".indexOf("c");
+  //document.write("Index of 'c' in 'abcd' is: " + index);
+
+  // search
+  index = "abcd".search(/c/);
+  //document.write("Index of 'c' in 'abcd' is (using 'search'): " + index);
+  newParagraph();
+
+  // replace
+  var lyric = "3 oh 3 it's a magic number";
+  document.write('lyric.replace("3", "4"): ' + lyric.replace("3", "4")); // replaces the first instance found
+  newParagraph();
+
+  document.write('lyric: ' + lyric); // has the original string changed?
+  newParagraph();
+
+  document.write('lyric.replace(/3/, "4"): ' + lyric.replace(/3/, "4")); // regular expressions also replace the first instance
+  newParagraph();
+
+  document.write('lyric.replace(/3/g, "4"): ' + lyric.replace(/3/g, "4")); // g for global -> replaces all the instances
+  newParagraph();
+
+  //slice
+  var letters = "abcd";
+  document.write("letters.slice(1,3): " + letters.slice(1,3));
+  newParagraph();
+  newParagraph();
+
+
+  // another slice
+  var letters = ['a','b','c','d'];
+  var sliced = letters.slice(1,3);
+  for (var i=0; i < sliced.length; i++) {
+    document.write(sliced[i]);
+  }
+  newParagraph();
+
+  // split
+  var words = "<br/>The western wave, was all a-flame".split(" ");
+  for (var i=0; i < words.length; i++) {
+    document.write(words[i]);
+    newParagraph();
+  }
+  var letters = "abcd".split("");
+  for (var i=0; i < letters.length; i++) {
+    document.write(letters[i]);
+    newParagraph();
+  }
+  newParagraph();
+
+  // toUpperCase / toLowerCase
+  var name = "Frank";
+  document.write("Upper case of 'Frank': " + name.toUpperCase());
+  newParagraph();
+  document.write("Lower case of 'Frank': " + name.toLowerCase());
+  newParagraph();
+
+
+  </script>
+</body>
+<html>

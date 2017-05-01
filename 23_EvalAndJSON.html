@@ -1,0 +1,32 @@
+<!DOCTYPE>
+<html>
+<head>
+  <script class="jsbin" src="https://github.com/douglascrockford/JSON-js/blob/master/json2.js"></script>
+</head>
+<body>
+
+
+  <script>
+
+  function newParagraph() {
+    document.write("<br/> ");
+  }
+
+  eval("alert('Hello world!')");
+
+
+  // eval can be used to parse JSON
+  var input = '{"books":[{"title":"Frankenstein","author":"Mary Shelley"}]}';
+  eval("var data = " + input);
+  document.write("parsed with eval: " + data.books[0].title + " by " + data.books[0].author);
+  newParagraph();
+
+  var withJson2 = JSON.parse(input);
+  document.write("parsed with json2: " + withJson2.books[0].title + " by " + withJson2.books[0].author);
+  newParagraph();
+
+  document.write("JSON.stringify(): " + JSON.stringify(withJson2));
+
+  </script>
+</body>
+<html>

@@ -1,0 +1,95 @@
+<!DOCTYPE>
+<html>
+<head>
+  <script class="jsbin" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+</head>
+<body>
+  <script>
+
+  function newParagraph() {
+    document.write("<br/> ");
+  }
+
+
+  var numbers = [1, 2, 3];
+
+  document.write("functional style");
+  newParagraph();
+
+  _.each(numbers, function (num) {
+    document.write(num);
+    newParagraph();
+  });
+
+  newParagraph();
+
+
+  document.write("object-oriented style");
+  newParagraph();
+
+  _(numbers).each(function (num) {
+    document.write(num);
+    newParagraph();
+  });
+  newParagraph();
+
+  document.write("map function");
+  newParagraph();
+  document.write(numbers);
+  newParagraph();
+
+  // translates one collection into another colllection. the provided fucntion will be applied to each value in the collection
+  var doubled = _(numbers).map(function(num) {
+    return num*2;
+  });
+
+  document.write("[1,2,3] doubled: " + doubled);
+
+  newParagraph();
+
+
+  // takes a collection and reduces to a single value
+  var total = _(doubled).reduce(function (memo, num){
+    return memo += num;
+  }, 0);
+  document.write("My reduced [" + doubled + "]: " + total);
+
+  //document.write("total: " + total);
+  newParagraph();
+
+  // document.write("map");
+  // var doubled = _(numbers).map(function (num) {
+  //   return num * 2;
+  // });
+
+  newParagraph();
+  numbers = [1,2,3,4,5];
+  document.write("numbers: " + numbers);
+  newParagraph();
+
+  // select
+  var evens = _(numbers).select(function (num) {
+    return num % 2 === 0;
+  });
+  document.write("[1,2,3,4,5] evens: " + evens);
+  newParagraph();
+
+  // all
+  var allNumbers = _([1,2,'e']).all(function (item) {
+    return typeof item === "number";
+  });
+  document.write("All arrays elements are numbers?  " + allNumbers);
+  newParagraph();
+
+
+  var fruits = ['wheat flour', 'sugar', 'salt', 'peanut', 'caramel'];
+  // include
+  var hasPeanuts = _(fruits).include("peanut");
+  document.write("array fruits: ["+ fruits +"] has peanuts? " + hasPeanuts);
+  newParagraph();
+
+  // max
+  document.write(_({a: 3, b:2, c:1}).max());
+  </script>
+</body>
+<html>
