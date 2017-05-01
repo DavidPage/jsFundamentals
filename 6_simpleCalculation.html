@@ -1,0 +1,24 @@
+<!DOCTYPE>
+<html>
+<body>
+<script>
+
+function calculateCircunference(diameter){
+  return diameter * 3.14;
+}
+
+document.write("This is the diameter of a circunferece of diameter 20: " + calculateCircunference(20));
+
+function calculateCircunferenceWithMath(diameter){
+  return diameter * Math.PI;
+}
+
+// From Mozilla MDN network
+document.write("<br /> This is the diameter of a circunferece of diameter 20 by using Math.PI: " + calculateCircunferenceWithMath(20));
+
+
+document.write("<br /> This is the diameter of a circunferece of diameter 20 with 3 decimal places: " + calculateCircunferenceWithMath(20).toFixed(3));
+
+</script>
+</body>
+<html>

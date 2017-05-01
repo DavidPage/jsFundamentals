@@ -1,0 +1,30 @@
+<!DOCTYPE>
+<html>
+<body>
+<script>
+
+var joe = {  name: "Joseph"};
+document.write("joe equals (===) joe: " + (joe === joe));
+
+// This equals will be false since joe1 and 2 are separate objects. Any change to one won't be reflected on the other
+var joe2 = {  name: "Joseph"};
+document.write("<br /> joe equals (===) joe2: " + (joe === joe2));
+
+
+document.write("<br /> cat equals (===) cat: " + ("cat" === "cat"));
+document.write("<br /> apple equals (===) cat: " + ("apple" === "cat"));
+document.write("<br /> 16 equals (===) 16: " + (16 === 16));
+
+//inequality
+document.write("<br /> 1 not equals (!==) 2: " + (1 !== 2));
+
+// the == operator
+document.write("<br /> 1 equals (==) \"1\": " + (1 == "1"));
+document.write("<br /> \"\" equals (==) 0: " + ("" == 0));
+
+
+
+
+</script>
+</body>
+<html>

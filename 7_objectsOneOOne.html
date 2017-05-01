@@ -1,0 +1,54 @@
+<!DOCTYPE>
+<html>
+<body>
+<script>
+
+var myObject = {}
+
+document.write(myObject.toString());
+
+var tim = new Object();
+tim.name = "Tim Bob";
+
+document.write("<br />" + tim.name);
+
+var john = {
+  name: "John Blaine",
+  age: 21,
+  address: "blah street"
+}
+
+
+document.write("<br /> john.name: " + john.name);
+document.write("<br /> john.age: " + john.age);
+document.write("<br /> john.address: " + john.address);
+document.write("<br /> john: " + john.toString());
+
+
+document.write("<br /> " + false.toString());
+document.write("<br /> " + document.write.toString());
+document.write("<br /> " + [1,2,3].toString());
+
+john.toString = function(){
+  return "name: " + this.name + " age: "+ this.age + " address: " + this.address;
+}
+
+document.write("<br /> overwritten john: " + john.toString());
+
+// Object nesting
+var parentNode = {
+  childNode:{
+    childName: "child1",
+    value: 2
+  },
+  parentName : "parent1"
+}
+
+// Nested objects accessors
+document.write("<br /> Parent node: " + parentNode.childNode.childName);
+document.write("<br /> Child node: " + parentNode.parentName);
+
+
+</script>
+</body>
+<html>
