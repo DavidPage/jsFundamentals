@@ -1,0 +1,28 @@
+<!DOCTYPE>
+<html>
+<body>
+  <script>
+
+  function count() {
+
+    for(var i = 0; i < 10; i ++){
+      document.write("<br /> " + i);
+    }
+  }
+
+
+  count();
+
+  var tom = {
+    name: "Tomas",
+    age: 17
+  };
+
+  for (var propertyKey in tom){
+    document.write("<br />" + propertyKey);
+    document.write("<br />" + tom[propertyKey]);
+  }
+
+  </script>
+</body>
+<html>

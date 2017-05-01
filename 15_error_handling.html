@@ -1,0 +1,20 @@
+<!DOCTYPE>
+<html>
+<body>
+  <script>
+
+  try{
+    throw{
+      name: "This is the name of the exception",
+      message: "This is the message of the exception"
+    };
+  }catch(e){
+    document.write("<br /> exceptionName: " + e.name + " <br /> exceptionMessage: " + e.message);
+  }finally{
+    document.write("<br /> This will allways be executed regardless of the try catch resolutions");
+  }
+
+
+  </script>
+</body>
+<html>
