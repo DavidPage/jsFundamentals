@@ -1,0 +1,35 @@
+<!DOCTYPE>
+<html>
+<body>
+<script>
+
+function argumentsType(){
+  document.write("<br /> length of parameters: " + arguments.length);
+  document.write("<br /> arguments[0]: " + arguments[0]);
+
+  return typeof arguments;
+}
+
+document.write("<br /> parameters type: " + argumentsType("a"));
+
+function add(){
+  var total = 0;
+
+  for( var i = 0;i < arguments.length; i ++){
+    total += arguments[i];
+  }
+
+  return total;
+}
+
+document.write("<br /> add(): " + add());
+document.write("<br /> add(5): " + add(5));
+document.write("<br /> add(2,3,8,2): " + add(2,3,8,2));
+
+
+
+
+
+</script>
+</body>
+<html>

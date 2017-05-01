@@ -1,0 +1,27 @@
+<!DOCTYPE>
+<html>
+<body>
+<script>
+
+
+var a = "a";
+
+function outer() {
+  var b = "b";
+  function middle() {
+    var c = "c";
+    // the function 'inner' can access all variables in the outer scopes
+    function inner() {
+      document.write (a + b + c);
+    }
+    inner();
+  }
+  middle();
+}
+
+outer();
+
+
+</script>
+</body>
+<html>

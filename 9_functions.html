@@ -1,0 +1,48 @@
+<!DOCTYPE>
+<html>
+<body>
+<script>
+
+
+function add(num, num2, num3){
+  return num + num2 + num3;
+}
+
+// JS doesn't allow overloading of methods, so this will override the first one
+function add(num, num2){
+  document.write("<br /> " +  typeof num2);
+  return num + num2;
+}
+
+document.write("<br />" + add(6,7));
+document.write("<br />" + add(6,7,1)); //third param will be ignored. it's called Paramter flexibility.
+
+document.write("<br />  type of param num2 (3 + undefined = NaN )" + add(3)); // SHould throw a NaN (Not a number)
+
+var name = "Tom";
+function reverse(a){
+  a = a.split('').reverse().join('');
+  return a;
+}
+
+document.write("<br />  " + reverse(name));
+document.write("<br />  " + name);
+
+
+var dave = { name: "Dave"};
+
+function revertName(objParam){
+  objParam.name = reverse(objParam.name);
+  return objParam;
+}
+
+document.write("<br />  Dave object accessor for name field: " + revertName(dave).name);
+document.write("<br />  Dave name: " + dave.name);
+
+
+
+
+
+</script>
+</body>
+<html>
